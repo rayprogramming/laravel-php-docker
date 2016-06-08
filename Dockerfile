@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 MAINTAINER Tobias Kuendig <tobias@offline.swiss>
 
-RUN apt-get update && apt-get -y install git curl apache2 php7.0 libapache2-mod-php7.0 php7.0-mysql php7.0-sqlite php7.0-mcrypt php7.0-xml php7.0-zip unzip php7.0-mbstring php7.0-json supervisor && apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get -y install git curl apache2 php7.0 libapache2-mod-php7.0 php7.0-mysql php7.0-sqlite php7.0-mcrypt nodejs php7.0-xml php7.0-zip unzip php7.0-mbstring php7.0-json supervisor && apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN /usr/sbin/a2enmod rewrite php7.0
 
@@ -21,5 +21,6 @@ WORKDIR /var/www/laravel
 
 EXPOSE 80
 EXPOSE 443
+EXPOSE 3000
 
 CMD ["/usr/bin/supervisord"]
