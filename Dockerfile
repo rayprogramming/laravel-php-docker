@@ -14,13 +14,11 @@ RUN usermod -u 1000 www-data
 RUN groupmod -g 1000 www-data
 RUN /usr/bin/curl -sS https://getcomposer.org/installer |/usr/bin/php
 RUN /bin/mv composer.phar /usr/local/bin/composer
-RUN /bin/mkdir /var/www/laravel
-RUN /bin/chown www-data:www-data -R /var/www/laravel
+RUN /bin/chown www-data:www-data -R /var/www
 
-WORKDIR /var/www/laravel
+WORKDIR /var/www
 
 EXPOSE 80
 EXPOSE 443
-EXPOSE 3000
 
 CMD ["/usr/bin/supervisord"]
