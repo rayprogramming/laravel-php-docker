@@ -1,4 +1,4 @@
-# laravel-php7.0-docker
+# laravel-php-docker
 
 > Docker image optimized for Laravel with PHP 7.1 on Apache
 
