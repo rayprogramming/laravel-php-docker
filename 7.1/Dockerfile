@@ -1,5 +1,5 @@
 FROM php:7.1-apache-stretch
-MAINTAINER Tobias Kuendig <tobias@offline.swiss>
+MAINTAINER Lucas Pearson <pearson.lucas@gmail.com>
 
 RUN apt-get update && apt-get -y install git curl unzip supervisor nodejs libmcrypt-dev libreadline-dev libxml2 libxml2-dev libwebp-dev libjpeg62-turbo-dev libpng-dev libxpm-dev libfreetype6-dev && apt-get -y autoremove && apt-get clean && rm -rf /var/lib/apt/lists/*
 
