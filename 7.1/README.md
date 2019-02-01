@@ -1,6 +1,6 @@
 # laravel-php7.0-docker
 
-> Docker image optimized for Laravel with PHP 7.0 on Apache
+> Docker image optimized for Laravel with PHP 7.1 on Apache
 
 * Queue worker daemon via supervisord
 
@@ -8,7 +8,7 @@
 
 Mount your existing Laravel installation to /var/www
 
-    docker run -p 8080:80 -p 8443:443 -v /home/user/code/laravel:/var/www -d offlinegmbh/laravel-php7.0
+    docker run -p 8080:80 -p 8443:443 -v /home/user/code/laravel:/var/www -d catdevman/laravel-php-docker:php7.1
 
 
 ### docker-compose example
@@ -31,7 +31,7 @@ services:
         image: redis
 
     web:
-        image: offlinegmbh/laravel-php7.0
+        image: catdevman/laravel-php-docker:php7.1
         depends_on:
             - db
             - redis
